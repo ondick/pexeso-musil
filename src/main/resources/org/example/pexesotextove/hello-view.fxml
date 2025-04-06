@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pexesotextove.GameController">
+
+    <top>
+        <VBox spacing="20.0">
+            <HBox spacing="20">
+                <Label fx:id="labelScorePlayer1" text="0" />
+                <Label fx:id="labelScorePlayer2" text="0" />
+                <Label fx:id="labelCurrentPlayer" text="Hráč 1" />
+            </HBox>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+        </VBox>
+    </top>
+
+    <center>
+        <GridPane fx:id="gridPane" alignment="CENTER" hgap="10" vgap="10" />
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER">
+            <Label fx:id="labelWinner" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
