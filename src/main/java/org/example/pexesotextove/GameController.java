@@ -39,6 +39,22 @@ public class GameController {
         updateUI();
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void generateCards() {
         for (int i = 1; i <= 8; i++) {
             cards.add(new Card(i));
@@ -60,8 +76,10 @@ public class GameController {
         }
     }
 
+
+
     private void handleCardClick(Card card) {
-        if (!canFlip || card.isMatched() || card.getButton().getText() != "?") {
+        if (!canFlip || card.isMatched() || card.isFaceUp()) {
             return;
         }
 
@@ -78,6 +96,11 @@ public class GameController {
             pause.play();
         }
     }
+
+
+
+
+
 
     private void checkMatch() {
         if (firstCard.getId() == secondCard.getId()) {
