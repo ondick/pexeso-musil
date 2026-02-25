@@ -40,22 +40,6 @@ public class GameController {
         updateUI();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private void generateCards() {
         for (int i = 1; i <= 8; i++) {
             cards.add(new Card(i));
@@ -100,9 +84,6 @@ public class GameController {
 
 
 
-
-
-
     private void checkMatch() {
         if (firstCard.getId() == secondCard.getId()) {
             firstCard.setMatched(true);
@@ -131,7 +112,7 @@ public class GameController {
             showWinner();
         }
     }
-
+    //cigan konci hra???
     private boolean isGameOver() {
         for (int i = 0; i < cards.size(); i++) {
             if (!cards.get(i).isMatched()) {
