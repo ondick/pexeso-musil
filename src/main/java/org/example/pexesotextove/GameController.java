@@ -1,6 +1,7 @@
 package org.example.pexesotextove;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -141,13 +142,46 @@ public class GameController {
     }
 
     private void showWinner() {
+        String message;
+
         if (score1 > score2) {
-            labelWinner.setText("Vyhrál hráč 1!");
+            message = "Vyhrál hráč 1!";
         } else if (score2 > score1) {
-            labelWinner.setText("Vyhrál hráč 2!");
+            message = "Vyhrál hráč 2!";
         } else {
-            labelWinner.setText("Remíza!");
+            message = "Remíza!";
         }
+
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Konec hry");
+            alert.setHeaderText(message);
+            alert.setContentText("Chceš hrát znovu?");
+            alert.showAndWait();
+
+            restartGame();
+        });
+    }
+
+    private void restartGame() {
+        // reset skóre
+        score1 = 0;
+        score2 = 0;
+        currentPlayer = 1;
+
+        // vyčistit staré karty
+        cards.clear();
+        firstCard = null;
+        secondCard = null;
+        canFlip = true;
+
+        // znovu vytvořit hru
+        generateCards();
+        Collections.shuffle(cards);
+        displayCards();
+        updateUI();
+
+        labelWinner.setText("");
     }
 
     private void updateUI() {
