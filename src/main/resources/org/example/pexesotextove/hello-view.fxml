@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pexesotextove.GameController">
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pexesotextove.GameController">
 
     <top>
         <VBox spacing="20.0">
             <HBox spacing="20">
                 <Label fx:id="labelScorePlayer1" text="0" />
                 <Label fx:id="labelScorePlayer2" text="0" />
+            <Label fx:id="labelScorePlayer3" text="0" />
                 <Label fx:id="labelCurrentPlayer" text="Hráč 1" />
             </HBox>
          <padding>
@@ -26,6 +30,34 @@
     <bottom>
         <HBox alignment="CENTER">
             <Label fx:id="labelWinner" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="" />
+         <HBox spacing="20">
+            <children>
+               <Label fx:id="pocetTahu1" text="0">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <padding>
+                     <Insets left="20.0" right="20.0" top="20" bottom="20" />
+                  </padding>
+               </Label>
+               <Label fx:id="pocetTahu2" text="0">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <padding>
+                     <Insets left="20.0" right="20.0" top="20.0" bottom="20" />
+                  </padding>
+               </Label>
+               <Label fx:id="pocetTahu3" text="0">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <padding>
+                     <Insets left="20.0" right="20.0" top="20.0" bottom="20"/>
+                  </padding>
+               </Label>
+            </children>
+         </HBox>
         </HBox>
     </bottom>
 
