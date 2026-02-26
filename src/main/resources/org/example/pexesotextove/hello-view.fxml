@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
@@ -37,7 +38,7 @@
                      <Insets />
                   </HBox.margin>
                   <padding>
-                     <Insets left="20.0" right="20.0" top="20" bottom="20" />
+                     <Insets left="20.0" right="20.0" top="20" />
                   </padding>
                </Label>
                <Label fx:id="pocetTahu2" text="0">
@@ -45,7 +46,7 @@
                      <Insets />
                   </HBox.margin>
                   <padding>
-                     <Insets left="20.0" right="20.0" top="20.0" bottom="20" />
+                     <Insets left="20.0" right="20.0" top="20.0" />
                   </padding>
                </Label>
                <Label fx:id="pocetTahu3" text="0">
@@ -53,9 +54,10 @@
                      <Insets />
                   </HBox.margin>
                   <padding>
-                     <Insets left="20.0" right="20.0" top="20.0" bottom="20"/>
+                     <Insets left="20.0" right="20.0" top="20.0" />
                   </padding>
                </Label>
+               <Button mnemonicParsing="false" onMouseClicked="#initialize" text="Restart" />
             </children>
          </HBox>
         </HBox>

@@ -11,7 +11,7 @@ public class Pexeso extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Pexeso.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 450, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 580, 500);
         stage.setTitle("Pexeso");
         stage.setScene(scene);
         stage.show();

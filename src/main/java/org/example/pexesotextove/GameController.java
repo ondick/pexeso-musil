@@ -48,10 +48,11 @@ public class GameController {
 
     @FXML
     public void initialize() {
-        generateCards();
+        /*generateCards();
         Collections.shuffle(cards);
         displayCards();
-        updateUI();
+        updateUI();*/
+        restartGame();
     }
 
     private void generateCards() {
